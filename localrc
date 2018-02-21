@@ -1,0 +1,27 @@
+alias mado='sudo -u meilleursagents'
+
+export DISABLE_AUTO_TITLE='true'
+
+export PGHOST=sql-dev.meilleursagents.net
+export PGPORT=6543
+export PGDATABASE=meilleursagents_dev
+export PGUSER=meilleursagents_dev
+export MA_ENV=dev
+export MA_INSTANCE=jonathanc
+
+export PYENV_VERSION=system
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+eval $(ssh-agent)
+ssh-add ~/.ssh/google_idrsa
+
+function switch_repo {
+    rm ~/meilleursagents && ln -s ~/$1  ~/meilleursagents && sudo service nginx restart
+}
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
+source /home/jonathanc/MA-Infra/tools/gssh/gssh.sh
