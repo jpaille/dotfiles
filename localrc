@@ -2,10 +2,10 @@ alias mado='sudo -u meilleursagents'
 
 export DISABLE_AUTO_TITLE='true'
 
-export PGHOST=sql-dev.meilleursagents.net
+export PGHOST=ma-www-db-dev-1c-1
 export PGPORT=5432
 export PGDATABASE=meilleursagents_dev
-export PGUSER=meilleursagents_dev
+export PGUSER=meilleursagents
 export MA_ENV=dev
 export MA_INSTANCE=jonathanc
 
