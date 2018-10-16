@@ -8,6 +8,8 @@ export PGDATABASE=meilleursagents_dev
 export PGUSER=meilleursagents
 export MA_ENV=dev
 export MA_INSTANCE=jonathanc
+export ENVIRONMENT=dev-server
+export SECRET_KEY=aglakgjalkjj
 
 eval $(ssh-agent)
 ssh-add ~/.ssh/google_idrsa
