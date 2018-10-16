@@ -11,7 +11,7 @@ export MA_INSTANCE=jonathanc
 export ENVIRONMENT=dev-server
 export SECRET_KEY=aglakgjalkjj
 
-eval $(ssh-agent)
+eval $(ssh-agent -s)
 ssh-add ~/.ssh/google_idrsa
 
 function switch_repo {
