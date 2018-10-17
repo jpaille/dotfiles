@@ -11,8 +11,13 @@ export MA_INSTANCE=jonathanc
 export ENVIRONMENT=dev-server
 export SECRET_KEY=aglakgjalkjj
 
-eval $(ssh-agent -s)
-ssh-add ~/.ssh/google_idrsa
+if ps -p $SSH_AGENT_PID > /dev/null
+then
+	echo "ssh-agent is already running"
+else
+	eval $(ssh-agent -s)
+	ssh-add ~/.ssh/id_rsa
+fi
 
 function switch_repo {
     rm ~/meilleursagents && ln -s ~/$1  ~/meilleursagents && sudo service nginx restart
