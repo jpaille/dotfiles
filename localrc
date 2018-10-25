@@ -2,6 +2,7 @@ alias mado='sudo -u meilleursagents'
 
 export DISABLE_AUTO_TITLE='true'
 
+export ANSIBLE_VAULT_PASSWORD_FILE=~/.vault_pass.txt
 export PGHOST=ma-www-db-dev-1c-1
 export PGPORT=5432
 export PGDATABASE=meilleursagents_dev
@@ -12,8 +13,22 @@ export ENVIRONMENT=dev-server
 export SECRET_KEY=aglakgjalkjj
 
 function switch_repo {
-    rm ~/meilleursagents && ln -s ~/$1  ~/meilleursagents && sudo service nginx restart
+    rm ~/meilleursagents
+    ln -s ~/$1  ~/meilleursagents && sudo service nginx restart
 }
+
+if ! [ -d "$HOME/apps" ] ; then
+    mkdir $HOME/apps
+fi
+
+if [ -e "$HOME/meilleursagents" ] ; then
+    for app in $(ls -d $HOME/meilleursagents/apps/*/ | cut -d/ -f6)
+    do
+        if ! [ -e "$HOME/apps/$(echo $app | tr '[:upper:]' '[:lower:]')" ] ; then
+            ln -s $HOME/meilleursagents/apps/$app $HOME/apps/$(echo $app | tr '[:upper:]' '[:lower:]')
+        fi
+    done
+fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
