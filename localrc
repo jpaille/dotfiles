@@ -3,7 +3,7 @@ alias mado='sudo -u meilleursagents'
 export DISABLE_AUTO_TITLE='true'
 
 export ANSIBLE_VAULT_PASSWORD_FILE=~/.vault_pass.txt
-export PGHOST=ma-www-db-dev-1c-1
+export PGHOST=www-db-master.dev-internal.meilleursagents
 export PGPORT=5432
 export PGDATABASE=meilleursagents_dev
 export PGUSER=meilleursagents
