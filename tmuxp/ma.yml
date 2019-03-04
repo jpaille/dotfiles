@@ -10,7 +10,7 @@ windows:
       - blank
   - window_name: psql
     panes:
-      - pgcli -p 6543
+      - psql -p 6543
   - window_name: MA-Libs
     start_directory: ~/Libs
     panes:
