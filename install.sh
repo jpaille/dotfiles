@@ -1,5 +1,9 @@
 #!/bin/bash
 
+git clone git@github.com:MeilleursAgents/MeilleursAgents.git ~/ma1
+git clone git@github.com:MeilleursAgents/MeilleursAgents.git ~/ma2
+git clone git@github.com:MeilleursAgents/MA-Infra.git ~/MA-Infra
+
 cd ~/dotfiles/ && git submodule update --init
 
 # pyenv
