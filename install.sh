@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo apt -y install zsh
+
 git clone git@github.com:MeilleursAgents/MeilleursAgents.git ~/ma1
 git clone git@github.com:MeilleursAgents/MeilleursAgents.git ~/ma2
 git clone git@github.com:MeilleursAgents/MA-Infra.git ~/MA-Infra
@@ -7,11 +9,8 @@ git clone git@github.com:MeilleursAgents/MA-Infra.git ~/MA-Infra
 cd ~/dotfiles/ && git submodule update --init
 
 # pyenv
-
 curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
 git clone https://github.com/pyenv/pyenv-virtualenv.git $(PYENV_ROOT)/plugins/pyenv-virtualenv
-
-~/dotfiles/fzf/install
 
 ln -s ~/dotfiles/bin ~/bin
 ln -s ~/dotfiles/gitconfig ~/.gitconfig
@@ -27,7 +26,10 @@ ln -s ~/dotfiles/psqlrc ~/.psqlrc
 ln -s ~/dotfiles/sbclrc ~/.sbclrc
 ln -s ~/dotfiles/localrc ~/.localrc
 ln -s ~/dotfiles/vagrant-provisioning.sh ~/.vagrant-provisioning.sh
-ln -s ~/dotfiles/pgclirc ~/.config/pgcli/config
+
+sudo chsh -s `which zsh` jonathanc
+
+~/dotfiles/fzf/install
 
 pip install --user powerline-status
 pip install --user tmuxp
