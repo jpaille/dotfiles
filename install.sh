@@ -1,6 +1,8 @@
 #!/bin/bash
 
+# dependencies
 sudo apt -y install zsh
+sudo apt -y install vim-nox
 
 git clone git@github.com:MeilleursAgents/MeilleursAgents.git ~/ma1
 git clone git@github.com:MeilleursAgents/MeilleursAgents.git ~/ma2
