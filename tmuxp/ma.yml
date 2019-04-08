@@ -20,3 +20,7 @@ windows:
     panes:
       - shell_command:
         - pyenv activate py27-infra
+  - window_name: airflow
+    start_directory: ~/MA-Airflow
+    panes:
+      - blank
