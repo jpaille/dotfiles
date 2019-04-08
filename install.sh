@@ -43,3 +43,16 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     brew install httpie
 fi
+
+NODE_VERSION="10"
+
+rm -rf "${HOME}/n-install"
+git clone --depth 1 https://github.com/tj/n.git "${HOME}/n-install"
+pushd "${HOME}/n-install"
+PREFIX="${HOME}/opt" make install
+popd
+rm -rf "${HOME}/n-install"
+
+n "${NODE_VERSION}"
+
+npm install --ignore-scripts -g npm node-gyp
