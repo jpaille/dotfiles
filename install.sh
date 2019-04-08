@@ -37,6 +37,7 @@ sudo chsh -s `which zsh` jonathanc
 
 pip install --user powerline-status
 pip install --user tmuxp
+pip install --user gitpython
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     sudo apt-get install httpie
