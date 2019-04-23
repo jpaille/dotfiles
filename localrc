@@ -28,15 +28,6 @@ if ! [ -d "$HOME/apps" ] ; then
     mkdir $HOME/apps
 fi
 
-if [ -e "$HOME/meilleursagents" ] ; then
-    for app in $(ls -d $HOME/meilleursagents/apps/*/ | cut -d/ -f6)
-    do
-        if ! [ -e "$HOME/apps/$(echo $app | tr '[:upper:]' '[:lower:]')" ] ; then
-            ln -s $HOME/meilleursagents/apps/$app $HOME/apps/$(echo $app | tr '[:upper:]' '[:lower:]')
-        fi
-    done
-fi
-
 source /home/jonathanc/MA-Infra/tools/gssh/gssh.sh
 
 # Node

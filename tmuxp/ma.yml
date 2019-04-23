@@ -21,10 +21,6 @@ windows:
       - shell_command:
         - pyenv activate py27-infra
   - window_name: airflow
-    start_directory: ~/MA-Airflow
-    panes:
-      - blank
-  - window_name: airflow
     start_directory: /home/jonathanc/MA-Airflow
     layout: d0d0,238x68,0,0{119x68,0,0,6,118x68,120,0[118x34,120,0,7,118x33,120,35,8]}
     panes:
