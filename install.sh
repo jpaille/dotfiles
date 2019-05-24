@@ -1,8 +1,14 @@
 #!/bin/bash
 
 # dependencies
-sudo apt -y install zsh
-sudo apt -y install vim-nox
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    sudo apt -y install zsh
+    sudo apt -y install vim-nox
+    sudo apt -y install httpie
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    brew install zsh
+    brew install httpie
+fi
 
 git clone git@github.com:MeilleursAgents/MeilleursAgents.git ~/ma1
 git clone git@github.com:MeilleursAgents/MeilleursAgents.git ~/ma2
