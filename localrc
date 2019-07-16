@@ -35,7 +35,7 @@ n 10
 
 restart() {
     set -o shwordsplit
-    local apps=(${@:-'www portfolio mediaapi marketapi geoapi mailapi indiceapi mypro myproapi followup partners profileapi pdfapi webanalytics barometre'})
+    local apps=(${@:-'www portfolio mediaapi marketapi geoapi mailapi indiceapi mypro myproapi tools partners profileapi pdfapi webanalytics barometre'})
 
     for i in ${apps[@]}; do
         echo "Restarting ${i}..."
@@ -45,7 +45,7 @@ restart() {
 
 rebuild() {
     set -o shwordsplit
-    local apps=(${@:-'www Portfolio MediaAPI MarketAPI GeoAPI MailAPI IndiceAPI MyPro MyProAPI FollowUp Partners ProfileAPI PdfAPI'})
+    local apps=(${@:-'www Portfolio MediaAPI MarketAPI GeoAPI MailAPI IndiceAPI MyPro MyProAPI Tools Partners ProfileAPI PdfAPI'})
 
     for i in ${apps[@]}; do
         local appName=$(ls "/home/${USER}/meilleursagents/apps/" | grep -i "${i}" | head -1)
