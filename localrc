@@ -19,6 +19,8 @@ export N_PREFIX="${HOME}/opt"
 
 export PATH="${HOME}/opt/bin:${PATH}"
 
+export PIPENV_VENV_IN_PROJECT=1
+
 function switch_repo {
     rm ~/meilleursagents
     ln -s ~/$1  ~/meilleursagents && sudo service nginx restart
@@ -28,7 +30,10 @@ if ! [ -d "$HOME/apps" ] ; then
     mkdir $HOME/apps
 fi
 
-source /home/jonathanc/MA-Infra/tools/gssh/gssh.sh
+source "${HOME}/MA-Infra/tools/gssh/gssh.sh"
+
+# source tokens from .ansible-localrc
+source "${HOME}/.ansible-localrc"
 
 # Node
 n 10

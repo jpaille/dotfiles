@@ -27,7 +27,7 @@ windows:
       - blank
       - shell_command:
         - pyenv activate py36-airflow
-        - make run-webserver
+        - echo "make run-webserver"
       - shell_command:
         - pyenv activate py36-airflow
-        - make run-scheduler
+        - echo "make run-scheduler"

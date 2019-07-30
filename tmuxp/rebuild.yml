@@ -1,0 +1,82 @@
+session_name: rebuild
+windows:
+  - window_name: ThirdPartiesAPI
+    start_directory: ~/
+    panes:
+      - shell_command:
+        - rebuild ThirdPartiesAPI
+  - window_name: Barometre
+    start_directory: ~/
+    panes:
+      - shell_command:
+        - rebuild Barometre
+  - window_name: WebAnalytics
+    start_directory: ~/
+    panes:
+      - shell_command:
+        - rebuild WebAnalytics
+  - window_name: PdfAPI
+    start_directory: ~/
+    panes:
+      - shell_command:
+        - rebuild PdfAPI
+  - window_name: ProfileAPI
+    start_directory: ~/
+    panes:
+      - shell_command:
+        - rebuild ProfileAPI
+  - window_name: Partners
+    start_directory: ~/
+    panes:
+      - shell_command:
+        - rebuild Partners
+  - window_name: Tools
+    start_directory: ~/
+    panes:
+      - shell_command:
+        - rebuild Tools
+  - window_name: MyProAPI
+    start_directory: ~/
+    panes:
+      - shell_command:
+        - rebuild MyProAPI
+  - window_name: MyPro
+    start_directory: ~/
+    panes:
+      - shell_command:
+        - rebuild MyPro
+  - window_name: IndiceAPI
+    start_directory: ~/
+    panes:
+      - shell_command:
+        - rebuild IndiceAPI
+  - window_name: MailAPI
+    start_directory: ~/
+    panes:
+      - shell_command:
+        - rebuild MailAPI
+  - window_name: GeoAPI
+    start_directory: ~/
+    panes:
+      - shell_command:
+        - rebuild GeoAPI
+  - window_name: MarketAPI
+    start_directory: ~/
+    panes:
+      - shell_command:
+        - rebuild MarketAPI
+  - window_name: MediaAPI
+    start_directory: ~/
+    panes:
+      - shell_command:
+        - rebuild MediaAPI
+  - window_name: Portfolio
+    start_directory: ~/
+    panes:
+      - shell_command:
+        - rebuild Portfolio
+  - window_name: www
+    start_directory: ~/
+    panes:
+      - shell_command:
+        - rebuild www
