@@ -70,11 +70,6 @@ windows:
     panes:
       - shell_command:
         - rebuild MediaAPI
-  - window_name: Portfolio
-    start_directory: ~/
-    panes:
-      - shell_command:
-        - rebuild Portfolio
   - window_name: www
     start_directory: ~/
     panes:
