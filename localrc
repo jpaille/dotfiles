@@ -10,7 +10,6 @@ export MA_ENV=dev
 export MA_INSTANCE=jonathanc
 export MA_REPOSITORY=${HOME}/meilleursagents
 export ENVIRONMENT=dev-server
-export SECRET_KEY=aglakgjalkjj
 
 export SSL_DISABLED=False
 export SSL_ACTIVE=True
