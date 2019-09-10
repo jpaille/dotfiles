@@ -47,8 +47,11 @@ pip install --user gitpython
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     sudo apt-get install httpie
+    curl -LO https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep_11.0.2_amd64.deb
+    sudo dpkg -i ripgrep_11.0.2_amd64.deb
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     brew install httpie
+    brew install ripgrep
 fi
 
 NODE_VERSION="10"
