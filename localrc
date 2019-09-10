@@ -35,7 +35,7 @@ source "${HOME}/MA-Infra/tools/gssh/gssh.sh"
 source "${HOME}/.ansible-localrc"
 
 # Node
-n 10
+#n 10
 
 restart() {
     set -o shwordsplit
