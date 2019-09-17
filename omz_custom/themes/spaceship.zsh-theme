@@ -1,1 +1,0 @@
-/home/jonathanc/.omz_custom/themes/spaceship-prompt/spaceship.zsh-theme
