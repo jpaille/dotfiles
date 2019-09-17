@@ -20,6 +20,12 @@ export PATH="${HOME}/opt/bin:${HOME}/.local/bin:${PATH}"
 
 export PIPENV_VENV_IN_PROJECT=1
 
+export TLDR_HEADER='magenta bold underline'
+export TLDR_QUOTE='italic'
+export TLDR_DESCRIPTION='green'
+export TLDR_CODE='red'
+export TLDR_PARAM='blue'
+
 function switch_repo {
     rm ~/meilleursagents
     ln -s ~/$1  ~/meilleursagents && sudo service nginx restart
