@@ -11,8 +11,8 @@ export MA_INSTANCE=jonathanc
 export MA_REPOSITORY=${HOME}/meilleursagents
 export ENVIRONMENT=dev-server
 
-export SSL_DISABLED=False
-export SSL_ACTIVE=True
+export SSL_DISABLED=True
+export SSL_ACTIVE=False
 
 export N_PREFIX="${HOME}/opt"
 
