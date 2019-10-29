@@ -45,7 +45,7 @@ source "${HOME}/.ansible-localrc"
 
 restart() {
     set -o shwordsplit
-    local apps=(${@:-'www mediaapi marketapi geoapi mailapi indiceapi mypro myproapi tools partners profileapi pdfapi webanalytics barometre'})
+    local apps=(${@:-'www mediaapi marketapi geoapi mailapi indiceapi mypro myproapi tools partners profileapi pdfapi barometre'})
 
     for i in ${apps[@]}; do
         echo "Restarting ${i}..."
