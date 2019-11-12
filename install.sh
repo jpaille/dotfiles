@@ -15,35 +15,34 @@ my_install () {
 
 my_install $1 zsh vim-nox httpie
 
-git clone git@github.com:MeilleursAgents/MeilleursAgents.git ~/ma1
-git clone git@github.com:MeilleursAgents/MeilleursAgents.git ~/ma2
-git clone git@github.com:MeilleursAgents/MA-Infra.git ~/MA-Infra
+[[ ! -d "${HOME}/ma1" ]] && git clone git@github.com:MeilleursAgents/MeilleursAgents.git ~/ma1
+[[ ! -d "${HOME}/ma2" ]] && git clone git@github.com:MeilleursAgents/MeilleursAgents.git ~/ma2
+[[ ! -d "${HOME}/MA-Infra" ]] && git clone git@github.com:MeilleursAgents/MA-Infra.git ~/MA-Infra
 
 cd ~/dotfiles/ && git submodule update --init
 
 # pyenv
 curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
-git clone https://github.com/pyenv/pyenv-virtualenv.git $(PYENV_ROOT)/plugins/pyenv-virtualenv
+[[ ! -d "${PYENV_ROOT}/plugins/pyenv-virtualenv" ]] && git clone https://github.com/pyenv/pyenv-virtualenv.git $(PYENV_ROOT)/plugins/pyenv-virtualenv
 
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+[[ ! -d "${HOME}/.tmux/plugins/tpm" ]] && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-ln -s ~/dotfiles/bin ~/bin
-ln -s ~/dotfiles/gitconfig ~/.gitconfig
-ln -s ~/dotfiles/omz_custom ~/.omz_custom
-ln -s ~/dotfiles/oh-my-zsh ~/.oh-my-zsh
-ln -s ~/dotfiles/pythonrc.py ~/.pythonrc.py
-ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
-ln -s ~/dotfiles/tmuxp ~/.tmuxp
-ln -s ~/dotfiles/vim ~/.vim
-ln -s ~/dotfiles/vimrc ~/.vimrc
-ln -s ~/dotfiles/zshrc ~/.zshrc
-ln -s ~/dotfiles/psqlrc ~/.psqlrc
-ln -s ~/dotfiles/sbclrc ~/.sbclrc
-ln -s ~/dotfiles/localrc ~/.localrc
-ln -s ~/dotfiles/vagrant-provisioning.sh ~/.vagrant-provisioning.sh
-ln -s ~/dotfiles/antigenrc ~/.antigenrc
+[[ ! -L "${HOME}/.antigenrc" ]] && ln -s ~/dotfiles/antigenrc ~/.antigenrc
+[[ ! -L "${HOME}/bin" ]] && ln -s ~/dotfiles/bin ~/bin
+[[ ! -L "${HOME}/.gitconfig" ]] && ln -s ~/dotfiles/gitconfig ~/.gitconfig
+[[ ! -L "${HOME}/.localrc" ]] && ln -s ~/dotfiles/localrc ~/.localrc
+[[ ! -L "${HOME}/.oh-my-zsh" ]] && ln -s ~/dotfiles/oh-my-zsh ~/.oh-my-zsh
+[[ ! -L "${HOME}/.omz_custom" ]] && ln -s ~/dotfiles/omz_custom ~/.omz_custom
+[[ ! -L "${HOME}/.psqlrc" ]] && ln -s ~/dotfiles/psqlrc ~/.psqlrc
+[[ ! -L "${HOME}/.pythonrc.py" ]] && ln -s ~/dotfiles/pythonrc.py ~/.pythonrc.py
+[[ ! -L "${HOME}/.sbclrc" ]] && ln -s ~/dotfiles/sbclrc ~/.sbclrc
+[[ ! -L "${HOME}/.tmux.conf" ]] && ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
+[[ ! -L "${HOME}/.tmuxp" ]] && ln -s ~/dotfiles/tmuxp ~/.tmuxp
+[[ ! -L "${HOME}/.vim" ]] && ln -s ~/dotfiles/vim ~/.vim
+[[ ! -L "${HOME}/.vimrc" ]] && ln -s ~/dotfiles/vimrc ~/.vimrc
+[[ ! -L "${HOME}/.zshrc" ]] && ln -s ~/dotfiles/zshrc ~/.zshrc
 
-sudo chsh -s `which zsh` jonathanc
+sudo chsh -s $(which zsh) jonathanc
 
 ~/dotfiles/fzf/install
 
@@ -53,6 +52,7 @@ pip install --user gitpython
 
 curl -LO https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep_11.0.2_amd64.deb
 sudo dpkg -i ripgrep_11.0.2_amd64.deb
+rm ripgrep_11.0.2_amd64.deb
 
 NODE_VERSION="10"
 
