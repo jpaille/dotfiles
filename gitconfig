@@ -13,7 +13,7 @@
 [core]
 	editor = vi
 	trustctime = false
-	pager = diff-so-fancy | less --tabs=4 -RFX
+	pager = delta --dark
 [rerere]
 	enabled = 1
 
@@ -49,9 +49,6 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
-[diff-so-fancy]
-	changeHunkIndicators = true
-	stripLeadingSymbols = true
 [commit]
 	gpgsign = true
 [gpg]
