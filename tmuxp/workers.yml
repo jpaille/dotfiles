@@ -1,0 +1,24 @@
+session_name: workers
+start_directory: ~/meilleursagents/apps
+windows:
+  - window_name: workers
+    layout: tiled
+    panes:
+      - shell_command:
+        - cd Barometre
+        - make run-celery
+      - shell_command:
+        - cd MediaAPI
+        - make run-celery
+      - shell_command:
+        - cd MyProAPI
+        - make run-celery
+      - shell_command:
+        - cd SalesforceAPI
+        - make run-celery
+      - shell_command:
+        - cd Tools
+        - make run-celery
+      - shell_command:
+        - cd www
+        - make run-celery
