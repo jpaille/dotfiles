@@ -15,3 +15,7 @@ windows:
         - cd ~/Libs/EstimaModelsLib
       - shell_command:
         - cd ~/ma1/apps/MarketAPI
+  - window_name: backtests
+    panes:
+      - shell_command:
+        - cd ~/Data-Backtest
