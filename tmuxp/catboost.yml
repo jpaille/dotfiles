@@ -6,6 +6,7 @@ windows:
         - cd ~/catboost
         - pyenv activate catboost
   - window_name: wip
+    focus: true
     layout: 9149,274x75,0,0[274x24,0,0,2,274x50,0,25{136x50,0,25,3,137x50,137,25,4}]
     panes:
       - shell_command:

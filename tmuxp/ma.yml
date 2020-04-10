@@ -1,6 +1,7 @@
 session_name: ma
 windows:
   - window_name: repo1
+    focus: true
     start_directory: ~/ma1
     panes:
       - blank
