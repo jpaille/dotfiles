@@ -23,6 +23,7 @@ cd ~/dotfiles/ && git submodule update --init
 
 # pyenv
 curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
+PYENV_ROOT=${HOME}/.pyenv
 [[ ! -d "${PYENV_ROOT}/plugins/pyenv-virtualenv" ]] && git clone https://github.com/pyenv/pyenv-virtualenv.git $(PYENV_ROOT)/plugins/pyenv-virtualenv
 
 [[ ! -d "${HOME}/.tmux/plugins/tpm" ]] && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -54,7 +55,7 @@ curl -LO https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep_
 sudo dpkg -i ripgrep_11.0.2_amd64.deb
 rm ripgrep_11.0.2_amd64.deb
 
-NODE_VERSION="10"
+NODE_VERSION="12"
 
 rm -rf "${HOME}/n-install"
 git clone --depth 1 https://github.com/tj/n.git "${HOME}/n-install"
