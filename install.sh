@@ -13,7 +13,7 @@ my_install () {
     done
 }
 
-my_install $1 zsh vim-nox httpie
+my_install $1 zsh vim-nox httpie hub
 
 [[ ! -d "${HOME}/ma1" ]] && git clone git@github.com:MeilleursAgents/MeilleursAgents.git ~/ma1
 [[ ! -d "${HOME}/ma2" ]] && git clone git@github.com:MeilleursAgents/MeilleursAgents.git ~/ma2
