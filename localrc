@@ -58,10 +58,10 @@ rebuild() {
     local apps=(${@:-'www MediaAPI MarketAPI GeoAPI MailAPI IndiceAPI MyPro MyProAPI Tools Partners ProfileAPI PdfAPI'})
 
     for i in ${apps[@]}; do
-        local appName=$(ls "/home/${USER}/meilleursagents/apps/" | grep -i "${i}" | head -1)
+        local appName=$(ls "/home/${USER}/apps/" | grep -i "${i}" | head -1)
         echo "Rebuilding ${appName}..."
 
-        pushd "/home/${USER}/meilleursagents/apps/${appName}"
+        pushd "/home/${USER}/apps/${appName}/${appName}"
 
         make init-dev
         if [[ $(make -qp | grep build-assets | wc -l) -ge 1 ]]; then

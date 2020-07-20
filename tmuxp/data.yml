@@ -1,0 +1,26 @@
+session_name: data
+windows:
+  - window_name: ma
+    focus: true
+    start_directory: ~/ma1
+    panes:
+      - blank
+  - window_name: geoapi
+    start_directory: ~/GeoAPI
+    panes:
+      - blank
+  - window_name: marketapi
+    start_directory: ~/MarketAPI
+    panes:
+      - blank
+  - window_name: indiceapi
+    start_directory: ~/IndiceAPI
+    panes:
+      - blank
+  - window_name: psql
+    panes:
+      - psql -p 6543
+  - window_name: MA-Libs
+    start_directory: ~/Libs
+    panes:
+      - blank
