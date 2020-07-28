@@ -38,7 +38,9 @@ fi
 source "${HOME}/MA-Infra/tools/gssh/gssh.sh"
 
 # source tokens from .ansible-localrc
+set -a
 source "${HOME}/.ansible-localrc"
+set +a
 
 # Node
 #n 10
