@@ -6,21 +6,31 @@ windows:
     panes:
       - blank
   - window_name: geoapi
+    layout: d9b0,274x72,0,0{146x72,0,0,2,127x72,147,0,3}
     start_directory: ~/GeoAPI
     panes:
       - blank
+      - make run
   - window_name: marketapi
+    layout: d9b0,274x72,0,0{146x72,0,0,2,127x72,147,0,3}
     start_directory: ~/MarketAPI
     panes:
       - blank
+      - make run
   - window_name: indiceapi
+    layout: d9b0,274x72,0,0{146x72,0,0,2,127x72,147,0,3}
     start_directory: ~/IndiceAPI
     panes:
       - blank
+      - make run
   - window_name: psql
     panes:
       - psql -p 6543
   - window_name: MA-Libs
     start_directory: ~/Libs
+    panes:
+      - blank
+  - window_name: Backtests
+    start_directory: ~/Data-Backtest
     panes:
       - blank
