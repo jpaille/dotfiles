@@ -18,6 +18,10 @@ my_install $1 zsh vim-nox httpie hub
 [[ ! -d "${HOME}/ma1" ]] && git clone git@github.com:MeilleursAgents/MeilleursAgents.git ~/ma1
 [[ ! -d "${HOME}/ma2" ]] && git clone git@github.com:MeilleursAgents/MeilleursAgents.git ~/ma2
 [[ ! -d "${HOME}/MA-Infra" ]] && git clone git@github.com:MeilleursAgents/MA-Infra.git ~/MA-Infra
+[[ ! -d "${HOME}/Data-Backtest" ]] && git clone git@github.com:MeilleursAgents/Data-Backtest.git ~/Data-Backtest
+[[ ! -d "${HOME}/GeoAPI" ]] && git clone git@github.com:MeilleursAgents/GeoAPI.git ~/GeoAPI
+[[ ! -d "${HOME}/IndiceAPI" ]] && git clone git@github.com:MeilleursAgents/IndiceAPI.git ~/IndiceAPI
+[[ ! -d "${HOME}/MarketAPI" ]] && git clone git@github.com:MeilleursAgents/MarketAPI.git ~/MarketAPI
 
 cd ~/dotfiles/ && git submodule update --init
 
