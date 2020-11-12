@@ -75,6 +75,8 @@ imap <left> <nop>
 imap <right> <nop>
 
 nnoremap <leader>T :set expandtab<cr>:retab!<cr>
+nnoremap <leader>p oimport pdb; pdb.set_trace()<Esc>
+nnoremap <leader><S-p> Oimport pdb; pdb.set_trace()<Esc>
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k

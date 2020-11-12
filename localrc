@@ -35,7 +35,8 @@ if ! [ -d "$HOME/apps" ] ; then
     mkdir $HOME/apps
 fi
 
-source "${HOME}/MA-Infra/tools/gssh/gssh.sh"
+export MA_FOLDER="${HOME}"
+source ${MA_FOLDER}/MA-Infra/tools/gssh/gssh_aliases.sh
 
 # source tokens from .ansible-localrc
 set -a

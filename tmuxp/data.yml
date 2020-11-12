@@ -23,6 +23,12 @@ windows:
     panes:
       - blank
       - make run
+  - window_name: vectortileapi
+    layout: d9b0,274x72,0,0{146x72,0,0,2,127x72,147,0,3}
+    start_directory: ~/VectorTileAPI
+    panes:
+      - blank
+      - make run-debug
   - window_name: psql
     panes:
       - psql -p 6543
